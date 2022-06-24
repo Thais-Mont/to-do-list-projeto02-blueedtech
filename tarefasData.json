@@ -1,0 +1,22 @@
+ [
+  {
+    "tarefa": "Ir ao médico",
+    "descricao": "Levar exames solicitados",
+    "data": "23/06/2022",
+    "turno": "manhã"
+  },
+
+  {
+    "tarefa": "Estudar Frontend",
+    "descricao": "Iniciar estudos em HTML e CSS",
+    "data": "23/06/2022",
+    "turno": "tarde"
+  },
+
+  {
+    "tarefa": "Curso BlueEdtech",
+    "descricao": "Aula 04: Node e Express",
+   "data": "23/06/2022",
+    "turno": "noite"
+  }
+]
