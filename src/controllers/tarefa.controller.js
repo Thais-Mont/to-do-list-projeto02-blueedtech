@@ -1,5 +1,4 @@
 const tarefasService = require('../services/tarefa.service');
-const mongoose = require('mongoose');
 
 const findAllTarefasController = async (req, res) => {
   const alltarefas = await tarefasService.findAllTarefasService();
@@ -8,13 +7,7 @@ const findAllTarefasController = async (req, res) => {
 
 const findByIdTarefaController = async (req, res) => {
   const idParam = req.params.id;
-
-  if (!mongoose.Types.ObjectId.isValid(idParam)) {
-    return res.status(400).send({ message: 'Id Inválido!' });
-  }
-
   const chosenTarefa = await tarefasService.findByIdTarefaService(idParam);
-
   if (!chosenTarefa) {
     return res.status(404).send({ message: 'Tarefa não encontrada' });
   }
@@ -30,11 +23,6 @@ const createTarefaController = async (req, res) => {
 
 const updateTarefaController = async (req, res) => {
   const idParam = req.params.id;
-
-  if (!mongoose.Types.ObjectId.isValid(idParam)) {
-    return res.status(400).send({ message: 'Id Inválido!' });
-  }
-
   const editTarefa = req.body;
   const updatedTarefa = await tarefasService.updateTarefaService(
     idParam,
@@ -45,13 +33,7 @@ const updateTarefaController = async (req, res) => {
 
 const deleteTarefaController = async (req, res) => {
   const idParam = req.params.id;
-
-  if (!mongoose.Types.ObjectId.isValid(idParam)) {
-    return res.status(400).send({ message: 'Id Inválido!' });
-  }
-
   await tarefasService.deleteTarefaService(idParam);
-
   res.send({ message: 'Tarefa deletada com sucesso!' });
 };
 
