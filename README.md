@@ -8,10 +8,8 @@ Usando as tecnologias:
     * Express
     * Cors
     * Nodemon
+    * MongoDB
  
-Tarefas salvas em Memória Local nessa primeira etapa do projeto.
-
-
 
 ---
 ### Instruções

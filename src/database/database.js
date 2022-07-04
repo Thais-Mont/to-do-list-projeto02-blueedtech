@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const uri = 'mongodb://localhost:27017/to-do-list';
 
 const connectToDatabase = () => {
   mongoose
-    .connect('mongodb://localhost:27017/to-do-list', {
+    .connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
